@@ -9,7 +9,7 @@ Ohjelmalla on web-käyttöliittymä, joka sisältää kaksi näkymää: etusivu,
 
 ## Sovelluslogiikka 
 
-<img src=https://github.com/hhautajarvi/Ohtuminiprojekti/blob/master/dokumentaatio/kuvat/luokkakaavio.pdf>
+<img src="https://github.com/hhautajarvi/Ohtuminiprojekti/blob/master/dokumentaatio/kuvat/luokkakaavio.pdf">
 
 VinkkiService vastaa vinkkien lisäämiseen ja muokkaamiseen liittyvistä toiminnoista. Myöhemmin tehdään UserService, joka vastaa käyttäjiin liittyvistä tietokantatoiminnoista. Vastaavasti VinkkiRepository vastaa vinkkeihin liittyvistä tietokantatoiminnoista ja myöhemmin UserRepository käyttäjiin liittyvistä tietokantatoiminnoista. VinkkiService käyttää VinkkiRepositoryn tietoja ja UserService UserRepositoryn tietoja.
 
