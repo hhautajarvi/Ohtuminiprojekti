@@ -15,7 +15,7 @@ VinkkiService vastaa vinkkien lisäämiseen ja muokkaamiseen liittyvistä toimin
 
 ## Tietojen tallennus
 
-Tiedot vinkeistä ja käyttäjistä tallennetaan sqlite3-tietokantaan. Apuna käytetään Flaskia ja SQLAlchemyä. Tietojen tallentamisesta huolehtivat VinkkiRepository- ja UserRepository-luokat.
+Tiedot vinkeistä ja käyttäjistä tallennetaan sqlite3-tietokantaan. Apuna käytetään Flaskia. Tietojen tallentamisesta huolehtivat VinkkiRepository- ja UserRepository-luokat.
 
 ## Päätoiminnallisuudet
 
