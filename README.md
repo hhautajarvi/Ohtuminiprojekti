@@ -2,3 +2,8 @@
 * [Sprint backlog]()
 * [Flingan user storyt](https://edu.flinga.fi/s/EAL3A5M)
 
+## Definition of done
+
+* Yleinen 70% testikattavuus koodilla jokaisessa user storyssa
+* Koodi testattu sekä yksikkötesteillä, että hyväksymistestauksella
+* Koodi on näkyvissä Githubissa, GithubActions suorittaa testit ja ne menevät läpi, sekä toiminnallisuus on testattavissa Herokussa
