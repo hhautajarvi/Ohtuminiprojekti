@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+
+<h1>Lisää uusi vinkki</h1>
+<form action="/add_tip" method="POST">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          {{ message }}
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <div>
+        <label for="title">Lukuvinkin otsikko</label>
+        <input type="text" name="title" id="title" /> *
+      </div>
+  
+    <div>
+      <label for="url">Lukuvinkin url-osoite</label>
+      <input type="url" name="url" id="url" />
+    </div>
+  
+    <div>
+    <label for="description">Lukuvinkin kuvaus</label>
+    <input type="text" name="description" id="description" />
+    </div>
+  
+    <button>
+      Lisää uusi vinkki
+    </button>
+    <br>
+    Pakollinen tieto *
+    <br>
+  </form>
+
+{% endblock %}
