@@ -1,14 +1,14 @@
 CREATE TABLE user (
-    id SERIAL PRIMARY KEY, 
+    id INTEGER NOT NULL PRIMARY KEY, 
     login_name TEXT NOT NULL, 
     password TEXT NOT NULL, 
     name TEXT
 );
 
 CREATE TABLE tip (
-    id SERIAL PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY,
     title TEXT NOT NULL,
     url TEXT, 
     description TEXT,
-    user_id INTEGER
+    user_id INTEGER NOT NULL
 );

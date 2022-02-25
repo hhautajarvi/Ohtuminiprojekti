@@ -1,6 +1,4 @@
-from app import app
-from flask_sqlalchemy import SQLAlchemy
-from os import getenv
+import sqlite3
 
-app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL")
-database_connection = SQLAlchemy(app)
+database_connection = sqlite3.connect("master.db", check_same_thread=False)
+database_connection.isolation_level = None

@@ -5,9 +5,10 @@ class TipRepository:
         self.connection = connection
 
     def add_tip(self, title, url, description, user_id):
-        self.connection.session.execute("INSERT INTO tip (title, url, description, user_id)" \
-            " VALUES (:title, :url, :description, :user_id)", {"title":title, "url":url, "description":description, "user_id":user_id})
-        self.connection.session.commit()
+        cursor = self.connection.cursor()
+        cursor.execute("INSERT INTO tip (url, description, user_id, title)" \
+            " VALUES (?, ?, ?, ?)", (url, description, user_id, title))
+        self.connection.commit()
 
 
 tip_repository = TipRepository(database_connection)
