@@ -13,10 +13,24 @@ Lukuvinkkikirjasto
 
 <h2>Lisätyt vinkit</h2>
 
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  <ul>
+  {% for message in messages %}
+    {{ message }}
+  {% endfor %}
+  </ul>
+{% endif %}
+{% endwith %}
+
+<form action="/" method="POST">
 <ul>
     {% for tip in tips %}
-    <li>{{ tip.title }}</li>
+    <li>{{ tip.title }}
+        <button type="submit" name="delete" value="{{ tip.id }}">Poista</button>
+    </li>
     {% endfor %}
 </ul>
+</form>
 
 {% endblock %}

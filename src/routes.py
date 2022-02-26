@@ -2,10 +2,20 @@ from app import app
 from flask import render_template, request, flash, redirect, url_for
 from src.services.tip_service import tip_service
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def render_index():
     tips = tip_service.get_visible_tips()
     return render_template("index.html", tips=tips)
+
+@app.route("/", methods=["POST"])
+def delete_tip():
+    id_to_delete = request.form["delete"]
+    delete = tip_service.delete_tip(id_to_delete)
+    if delete:
+        flash("Poisto onnistui")
+    else:
+        flash("Poisto ei onnistunut")
+    return redirect_to_index()
 
 @app.route("/add_tip", methods=["GET"])
 def render_add_tip():

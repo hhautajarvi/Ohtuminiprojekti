@@ -16,4 +16,7 @@ class TipService:
         visible_tips = [tip for tip in tips if tip.visible==1]
         return visible_tips
 
+    def delete_tip(self, id):
+        return self._tip_repository.hide_tip(id)
+
 tip_service = TipService()
