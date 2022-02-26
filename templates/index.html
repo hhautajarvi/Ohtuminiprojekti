@@ -10,4 +10,13 @@ Lukuvinkkikirjasto
 <ul>
     <a href="/add_tip">Lisää uusi vinkki</a>
 </ul>
+
+<h2>Lisätyt vinkit</h2>
+
+<ul>
+    {% for tip in tips %}
+    <li>{{ tip.title }}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
