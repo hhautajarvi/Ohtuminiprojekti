@@ -10,5 +10,6 @@ CREATE TABLE tip (
     title TEXT NOT NULL,
     url TEXT, 
     description TEXT,
-    user_id INTEGER NOT NULL
+    user_id INTEGER NOT NULL,
+    visible BOOLEAN NOT NULL
 );
