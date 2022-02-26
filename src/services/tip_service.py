@@ -13,4 +13,8 @@ class TipService:
         self._tip_repository.add_tip(title, url, description, user_id)
         new_tip = Tip(title, url, description, user_id)
 
+    def get_tips(self):
+        tips = self._tip_repository.get_tips()
+        return tips
+
 tip_service = TipService()
