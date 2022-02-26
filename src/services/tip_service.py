@@ -11,8 +11,9 @@ class TipService:
             raise Exception("Anna enintään 300 merkin pituinen kuvaus")
         self._tip_repository.add_tip(title, url, description, user_id)
 
-    def get_tips(self):
+    def get_visible_tips(self):
         tips = self._tip_repository.get_tips()
-        return tips
+        visible_tips = [tip for tip in tips if tip.visible==1]
+        return visible_tips
 
 tip_service = TipService()

@@ -4,7 +4,7 @@ from src.services.tip_service import tip_service
 
 @app.route("/")
 def render_index():
-    tips = tip_service.get_tips()
+    tips = tip_service.get_visible_tips()
     return render_template("index.html", tips=tips)
 
 @app.route("/add_tip", methods=["GET"])
