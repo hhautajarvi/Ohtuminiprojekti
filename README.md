@@ -8,3 +8,6 @@
 * Yleinen 70% testikattavuus koodilla jokaisessa user storyssa
 * Koodi testattu sekä yksikkötesteillä, että hyväksymistestauksella
 * Koodi on näkyvissä Githubissa, GithubActions suorittaa testit ja ne menevät läpi, sekä toiminnallisuus on testattavissa Herokussa
+
+## Running tests
+![testing](https://github.com/hhautajarvi/Ohtuminiprojekti/actions/workflows/main.yml/badge.svg)
