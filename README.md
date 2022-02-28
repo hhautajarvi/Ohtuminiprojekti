@@ -11,3 +11,4 @@
 
 ## Running tests
 ![testing](https://github.com/hhautajarvi/Ohtuminiprojekti/actions/workflows/main.yml/badge.svg)
+[![codecov](https://codecov.io/gh/hhautajarvi/Ohtuminiprojekti/branch/master/graph/badge.svg?token=5CCL9IZFNO)](https://codecov.io/gh/hhautajarvi/Ohtuminiprojekti)
