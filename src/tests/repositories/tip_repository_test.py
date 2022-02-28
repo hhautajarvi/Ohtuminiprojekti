@@ -1,6 +1,7 @@
 import unittest
-from src.repositories.tip_repository import tip_repository
+#from repositories.tip_repository import TipRepository
 
 class TestTipRepository(unittest.TestCase):
-    def __init__(self):
-        pass
+
+    def test_zero(self):
+        self.assertEqual(0,0)

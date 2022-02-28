@@ -184,6 +184,18 @@ tomli = ">=1.0.0"
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
+name = "pytest-dotenv"
+version = "0.5.2"
+description = "A py.test plugin that parses environment files before running tests"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pytest = ">=5.0.0"
+python-dotenv = ">=0.9.1"
+
+[[package]]
 name = "python-dotenv"
 version = "0.19.2"
 description = "Read key-value pairs from a .env file and set them as environment variables"
@@ -193,6 +205,14 @@ python-versions = ">=3.5"
 
 [package.extras]
 cli = ["click (>=5.0)"]
+
+[[package]]
+name = "robotframework"
+version = "4.1.3"
+description = "Generic automation framework for acceptance testing and robotic process automation (RPA)"
+category = "dev"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "tomli"
@@ -215,8 +235,8 @@ watchdog = ["watchdog"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "3.8.10"
-content-hash = "82d620db47da65e3cddb0303f2951e0db22ac8bfcb0070513fd1694641ea9260"
+python-versions = "^3.8"
+content-hash = "598291c7957f2a42b2973666980d25776421ba7324b6f942a9392ce163cb67a8"
 
 [metadata.files]
 atomicwrites = [
@@ -360,9 +380,17 @@ pytest = [
     {file = "pytest-7.0.1-py3-none-any.whl", hash = "sha256:9ce3ff477af913ecf6321fe337b93a2c0dcf2a0a1439c43f5452112c1e4280db"},
     {file = "pytest-7.0.1.tar.gz", hash = "sha256:e30905a0c131d3d94b89624a1cc5afec3e0ba2fbdb151867d8e0ebd49850f171"},
 ]
+pytest-dotenv = [
+    {file = "pytest-dotenv-0.5.2.tar.gz", hash = "sha256:2dc6c3ac6d8764c71c6d2804e902d0ff810fa19692e95fe138aefc9b1aa73732"},
+    {file = "pytest_dotenv-0.5.2-py3-none-any.whl", hash = "sha256:40a2cece120a213898afaa5407673f6bd924b1fa7eafce6bda0e8abffe2f710f"},
+]
 python-dotenv = [
     {file = "python-dotenv-0.19.2.tar.gz", hash = "sha256:a5de49a31e953b45ff2d2fd434bbc2670e8db5273606c1e737cc6b93eff3655f"},
     {file = "python_dotenv-0.19.2-py2.py3-none-any.whl", hash = "sha256:32b2bdc1873fd3a3c346da1c6db83d0053c3c62f28f1f38516070c4c8971b1d3"},
+]
+robotframework = [
+    {file = "robotframework-4.1.3-py2.py3-none-any.whl", hash = "sha256:06c025e5b640a378d372292921f49c28f7d025e4876b7b8f98ecc56a3def9dc0"},
+    {file = "robotframework-4.1.3.zip", hash = "sha256:d2675cbe3e5a4c90be3ddb61be3b88cc0d6ff503c298ad8f8a78aad14e71e886"},
 ]
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
