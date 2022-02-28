@@ -1,5 +1,5 @@
-from src.database import database_connection
-from src.entities.tip import Tip
+from database import database_connection
+from entities.tip import Tip
 
 def get_tip_by_row(row):
     return Tip(row['id'], row['title'], row['url'], row['description'], row['user_id'], row['visible']) if row else None

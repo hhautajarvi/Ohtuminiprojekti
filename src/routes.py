@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, request, flash, redirect, url_for
-from src.services.tip_service import tip_service
+from services.tip_service import tip_service
 
 @app.route("/", methods=["GET"])
 def render_index():

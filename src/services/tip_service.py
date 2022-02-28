@@ -1,4 +1,4 @@
-from src.repositories.tip_repository import tip_repository as default_tip_repository
+from repositories.tip_repository import tip_repository as default_tip_repository
 
 class TipService:
     def __init__(self, tip_repository=default_tip_repository):
