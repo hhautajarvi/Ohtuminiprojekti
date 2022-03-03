@@ -24,6 +24,8 @@ jobs:
         run: pip install python-dotenv
       - name: Install Robot
         run: pip install robotframework
+      - name: selenium install
+        run: pip install -U selenium
       - name: Setup chromedriver
         uses: nanasess/setup-chromedriver@master
       - run: |
