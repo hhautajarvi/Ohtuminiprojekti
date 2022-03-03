@@ -14,4 +14,14 @@ class UserRepository:
             return False       
         return True
 
+    def get_user(self, username):
+        cursor = self.connection.cursor()
+        sql = "SELECT login_name FROM user WHERE login_name=:username"
+        result = cursor.execute(sql, {"username":username})
+        user = result.fetchone()
+        if user == None:
+            return False
+        else:
+            return True
+
 user_repository = UserRepository(database_connection)
