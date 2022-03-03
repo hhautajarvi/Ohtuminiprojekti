@@ -2,6 +2,7 @@
 * [Sprint backlog]()
 * [Flingan user storyt](https://edu.flinga.fi/s/EAL3A5M)
 * [Arkkitehtuuri](https://github.com/hhautajarvi/Ohtuminiprojekti/blob/master/dokumentaatio/arkkitehtuuri.md)
+* [Retrospektiivi viikko1](https://edu.flinga.fi/s/EG4Y7MS)
 
 ## Definition of done
 
