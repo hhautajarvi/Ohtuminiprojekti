@@ -4,7 +4,7 @@ from initialize_database import initialize_database
 class AppLibrary:
     def __init__(self):
 
-        self._base_url = 'http://localhost:5000'
+        self._base_url = 'http://localhost:5111'
 
         self.reset_application()
     
