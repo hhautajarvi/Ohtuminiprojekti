@@ -5,7 +5,7 @@ python src/initialize_database.py
 export FLASK_APP=src/app
 flask run --port 5111 &
 
-
+ 
 
 # suoritetaan testit
 robot src/e2e
