@@ -35,9 +35,29 @@ def add_new_tip():
     except Exception as error:
         flash(str(error))
         return redirect_to_add_tip()
-    
+
+@app.route("/register", methods=["GET"])
+def render_register():
+    return render_template("register.html")
+
+@app.route("/register", methods=["POST"])
+def register_new_user():
+    username = request.form.get("username")
+    password = request.form.get("password")
+    password_confirmation = request.form.get("password_confirmation")
+
+    try:
+        user_service.create_user(username, password, password_confirmation)
+        return redirect_to_index()
+    except Exception as error:
+        flash(str(error))
+        return redirect_to_register()
+
 def redirect_to_add_tip():
     return redirect(url_for("render_add_tip"))
 
 def redirect_to_index():
     return redirect(url_for("render_index"))
+
+def redirect_to_register():
+    return redirect(url_for("render_register"))
