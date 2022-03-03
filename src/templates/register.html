@@ -18,20 +18,25 @@ Rekisteröityminen
       {% endif %}
     {% endwith %}
     <div>
+        <label for="name">Nimi</label>
+        <input type="text" name="name" id="name" />
+      </div>
+
+    <div>
         <label for="username">Käyttäjätunnus</label>
         <input type="text" name="username" id="username" />
       </div>
-  
+
     <div>
       <label for="password">Salasana</label>
       <input type="password" name="password" id="password" />
     </div>
-  
+
     <div>
     <label for="password_confirmation">Salasanan vahvistaminen</label>
     <input type="password" name="password_confirmation" id="password_confirmation" />
     </div>
-  
+
     <button>
       Rekisteröidy
     </button>
