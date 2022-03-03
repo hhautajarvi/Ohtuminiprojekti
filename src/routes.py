@@ -1,6 +1,7 @@
 from app import app
 from flask import render_template, request, flash, redirect, url_for
 from services.tip_service import tip_service
+from services.user_service import user_service
 
 @app.route("/", methods=["GET"])
 def render_index():
@@ -42,12 +43,13 @@ def render_register():
 
 @app.route("/register", methods=["POST"])
 def register_new_user():
+    name = request.form.get("name")
     username = request.form.get("username")
     password = request.form.get("password")
     password_confirmation = request.form.get("password_confirmation")
 
     try:
-        user_service.create_user(username, password, password_confirmation)
+        user_service.create_user(name, username, password, password_confirmation)
         return redirect_to_index()
     except Exception as error:
         flash(str(error))
