@@ -18,6 +18,8 @@ jobs:
           python-version: 3.8
       - name: Install Poetry
         run: pip install poetry
+      - name: Install Flask
+        run: pip install flask
       - name: Setup chromedriver
         uses: nanasess/setup-chromedriver@master
       - run: |
