@@ -18,7 +18,7 @@ class TestUserRepository(unittest.TestCase):
         self.assertEqual(result, True)
 
     def test_get_user_nonexistent_user(self):
-        self.user_repository.add_user("kayttajanimi2", "salasana", "nimi")
-        result = self.user_repository.get_user("kayttajanimi3")
+        self.user_repository.add_user("kayttajanimi3", "salasana", "nimi")
+        result = self.user_repository.get_user("kayttajanimi4")
 
         self.assertEqual(result, False)
