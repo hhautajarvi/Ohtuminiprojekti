@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # käynnistetään Flask-palvelin taustalle
-flask run &
+flask run src/app.py&
 
 # odetetaan, että palvelin on valmiina ottamaan vastaan pyyntöjä
 while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:5000/ping)" != "200" ]]; 
