@@ -1,136 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220301 17:20:33.618" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220302 10:01:19.849" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="/home/xnaxnaxn/Ohtuminiprojekti/src/tests">
 <suite id="s1-s1" name="Home" source="/home/xnaxnaxn/Ohtuminiprojekti/src/tests/home.robot">
 <kw name="Open And Configure Browser" library="resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220301 17:20:33.914" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220301 17:20:33.913" endtime="20220301 17:20:34.607"/>
+<msg timestamp="20220302 10:01:20.169" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220302 10:01:20.169" endtime="20220302 10:01:20.896"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220301 17:20:34.608" endtime="20220301 17:20:34.715"/>
+<status status="PASS" starttime="20220302 10:01:20.897" endtime="20220302 10:01:21.005"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220301 17:20:34.715" endtime="20220301 17:20:34.717"/>
+<status status="PASS" starttime="20220302 10:01:21.006" endtime="20220302 10:01:21.008"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:33.913" endtime="20220301 17:20:34.717"/>
+<status status="PASS" starttime="20220302 10:01:20.168" endtime="20220302 10:01:21.009"/>
 </kw>
 <test id="s1-s1-t1" name="Click New Tip Link">
 <kw name="Go To Home Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220301 17:20:34.720" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20220301 17:20:34.720" endtime="20220301 17:20:34.800"/>
+<msg timestamp="20220302 10:01:21.016" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20220302 10:01:21.015" endtime="20220302 10:01:21.207"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:34.719" endtime="20220301 17:20:34.801"/>
+<status status="PASS" starttime="20220302 10:01:21.013" endtime="20220302 10:01:21.207"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>/add_tip</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:34.802" level="INFO">Clicking link '/add_tip'.</msg>
-<status status="PASS" starttime="20220301 17:20:34.801" endtime="20220301 17:20:34.906"/>
+<msg timestamp="20220302 10:01:21.208" level="INFO">Clicking link '/add_tip'.</msg>
+<status status="PASS" starttime="20220302 10:01:21.207" endtime="20220302 10:01:21.326"/>
 </kw>
 <kw name="New Tip Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lisää uusi lukuvinkki</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:34.920" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:34.908" endtime="20220301 17:20:34.920"/>
+<msg timestamp="20220302 10:01:21.335" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:21.327" endtime="20220302 10:01:21.335"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:34.907" endtime="20220301 17:20:34.921"/>
+<status status="PASS" starttime="20220302 10:01:21.326" endtime="20220302 10:01:21.336"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:34.717" endtime="20220301 17:20:34.921"/>
+<status status="PASS" starttime="20220302 10:01:21.009" endtime="20220302 10:01:21.336"/>
 </test>
 <test id="s1-s1-t2" name="No Previous Tips">
 <kw name="Go To Home Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220301 17:20:34.923" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20220301 17:20:34.923" endtime="20220301 17:20:34.942"/>
+<msg timestamp="20220302 10:01:21.339" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20220302 10:01:21.338" endtime="20220302 10:01:21.358"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:34.922" endtime="20220301 17:20:34.942"/>
+<status status="PASS" starttime="20220302 10:01:21.338" endtime="20220302 10:01:21.358"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Ei vielä lisättyjä lukuvinkkejä</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220301 17:20:34.969" level="INFO">Current page contains text 'Ei vielä lisättyjä lukuvinkkejä'.</msg>
-<status status="PASS" starttime="20220301 17:20:34.943" endtime="20220301 17:20:34.970"/>
+<msg timestamp="20220302 10:01:21.382" level="INFO">Current page contains text 'Ei vielä lisättyjä lukuvinkkejä'.</msg>
+<status status="PASS" starttime="20220302 10:01:21.359" endtime="20220302 10:01:21.382"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:34.922" endtime="20220301 17:20:34.970"/>
+<status status="PASS" starttime="20220302 10:01:21.337" endtime="20220302 10:01:21.383"/>
 </test>
 <test id="s1-s1-t3" name="Create Tip And Check If It Is Visible">
 <kw name="Go To Home Page" library="resource" type="SETUP">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220301 17:20:34.974" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20220301 17:20:34.973" endtime="20220301 17:20:34.991"/>
+<msg timestamp="20220302 10:01:21.386" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20220302 10:01:21.386" endtime="20220302 10:01:21.405"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:34.972" endtime="20220301 17:20:34.992"/>
+<status status="PASS" starttime="20220302 10:01:21.385" endtime="20220302 10:01:21.406"/>
 </kw>
 <kw name="Create Tip" library="AppLibrary">
 <arg>test</arg>
 <arg>test</arg>
 <arg>test</arg>
-<status status="PASS" starttime="20220301 17:20:34.992" endtime="20220301 17:20:35.020"/>
+<status status="PASS" starttime="20220302 10:01:21.406" endtime="20220302 10:01:21.435"/>
 </kw>
 <kw name="Go To Home Page" library="resource">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220301 17:20:35.021" level="INFO">Opening url 'http://localhost:5000'</msg>
-<status status="PASS" starttime="20220301 17:20:35.021" endtime="20220301 17:20:35.059"/>
+<msg timestamp="20220302 10:01:21.437" level="INFO">Opening url 'http://localhost:5000'</msg>
+<status status="PASS" starttime="20220302 10:01:21.437" endtime="20220302 10:01:21.468"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:35.020" endtime="20220301 17:20:35.059"/>
+<status status="PASS" starttime="20220302 10:01:21.436" endtime="20220302 10:01:21.468"/>
 </kw>
 <kw name="Home Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lukuvinkkikirjasto</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:35.066" level="INFO">Page title is 'Lukuvinkkikirjasto'.</msg>
-<status status="PASS" starttime="20220301 17:20:35.060" endtime="20220301 17:20:35.066"/>
+<msg timestamp="20220302 10:01:21.475" level="INFO">Page title is 'Lukuvinkkikirjasto'.</msg>
+<status status="PASS" starttime="20220302 10:01:21.469" endtime="20220302 10:01:21.475"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:35.060" endtime="20220301 17:20:35.066"/>
+<status status="PASS" starttime="20220302 10:01:21.469" endtime="20220302 10:01:21.476"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>test</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220301 17:20:35.089" level="INFO">Current page contains text 'test'.</msg>
-<status status="PASS" starttime="20220301 17:20:35.066" endtime="20220301 17:20:35.089"/>
+<msg timestamp="20220302 10:01:21.501" level="INFO">Current page contains text 'test'.</msg>
+<status status="PASS" starttime="20220302 10:01:21.476" endtime="20220302 10:01:21.501"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:34.971" endtime="20220301 17:20:35.089"/>
+<status status="PASS" starttime="20220302 10:01:21.384" endtime="20220302 10:01:21.502"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220301 17:20:35.091" endtime="20220301 17:20:35.147"/>
+<status status="PASS" starttime="20220302 10:01:21.504" endtime="20220302 10:01:21.564"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:33.646" endtime="20220301 17:20:35.148"/>
+<status status="PASS" starttime="20220302 10:01:19.885" endtime="20220302 10:01:21.564"/>
 </suite>
 <suite id="s1-s2" name="New Tip" source="/home/xnaxnaxn/Ohtuminiprojekti/src/tests/new_tip.robot">
 <kw name="Open And Configure Browser" library="resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220301 17:20:35.159" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220301 17:20:35.159" endtime="20220301 17:20:35.859"/>
+<msg timestamp="20220302 10:01:21.575" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220302 10:01:21.574" endtime="20220302 10:01:22.300"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220301 17:20:35.859" endtime="20220301 17:20:35.967"/>
+<status status="PASS" starttime="20220302 10:01:22.300" endtime="20220302 10:01:22.407"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220301 17:20:35.968" endtime="20220301 17:20:35.970"/>
+<status status="PASS" starttime="20220302 10:01:22.407" endtime="20220302 10:01:22.408"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:35.158" endtime="20220301 17:20:35.970"/>
+<status status="PASS" starttime="20220302 10:01:21.574" endtime="20220302 10:01:22.409"/>
 </kw>
 <test id="s1-s2-t1" name="Submit New Tip With Title">
 <kw name="Go To New Tip" type="SETUP">
@@ -138,21 +138,21 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${NEW TIP URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220301 17:20:35.977" level="INFO">Opening url 'http://localhost:5000/add_tip'</msg>
-<status status="PASS" starttime="20220301 17:20:35.976" endtime="20220301 17:20:36.075"/>
+<msg timestamp="20220302 10:01:22.412" level="INFO">Opening url 'http://localhost:5000/add_tip'</msg>
+<status status="PASS" starttime="20220302 10:01:22.412" endtime="20220302 10:01:22.515"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:35.974" endtime="20220301 17:20:36.076"/>
+<status status="PASS" starttime="20220302 10:01:22.411" endtime="20220302 10:01:22.516"/>
 </kw>
 <kw name="New Tip Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lisää uusi lukuvinkki</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:36.083" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.077" endtime="20220301 17:20:36.083"/>
+<msg timestamp="20220302 10:01:22.523" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:22.516" endtime="20220302 10:01:22.523"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.076" endtime="20220301 17:20:36.084"/>
+<status status="PASS" starttime="20220302 10:01:22.516" endtime="20220302 10:01:22.524"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:35.973" endtime="20220301 17:20:36.084"/>
+<status status="PASS" starttime="20220302 10:01:22.410" endtime="20220302 10:01:22.524"/>
 </kw>
 <kw name="Set Title">
 <arg>NewTip</arg>
@@ -160,19 +160,19 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.085" level="INFO">Typing text 'NewTip' into text field 'title'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.085" endtime="20220301 17:20:36.178"/>
+<msg timestamp="20220302 10:01:22.525" level="INFO">Typing text 'NewTip' into text field 'title'.</msg>
+<status status="PASS" starttime="20220302 10:01:22.525" endtime="20220302 10:01:22.623"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.084" endtime="20220301 17:20:36.179"/>
+<status status="PASS" starttime="20220302 10:01:22.524" endtime="20220302 10:01:22.623"/>
 </kw>
 <kw name="Submit Tip">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Lisää uusi vinkki</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.180" level="INFO">Clicking button 'Lisää uusi vinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.179" endtime="20220301 17:20:36.271"/>
+<msg timestamp="20220302 10:01:22.624" level="INFO">Clicking button 'Lisää uusi vinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:22.624" endtime="20220302 10:01:22.737"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.179" endtime="20220301 17:20:36.271"/>
+<status status="PASS" starttime="20220302 10:01:22.624" endtime="20220302 10:01:22.738"/>
 </kw>
 <kw name="Submit Should Succeed And Contain Tip">
 <arg>NewTip</arg>
@@ -180,20 +180,20 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lukuvinkkikirjasto</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:36.278" level="INFO">Page title is 'Lukuvinkkikirjasto'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.272" endtime="20220301 17:20:36.278"/>
+<msg timestamp="20220302 10:01:22.744" level="INFO">Page title is 'Lukuvinkkikirjasto'.</msg>
+<status status="PASS" starttime="20220302 10:01:22.739" endtime="20220302 10:01:22.744"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.272" endtime="20220301 17:20:36.278"/>
+<status status="PASS" starttime="20220302 10:01:22.739" endtime="20220302 10:01:22.744"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${message}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220301 17:20:36.295" level="INFO">Current page contains text 'NewTip'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.278" endtime="20220301 17:20:36.295"/>
+<msg timestamp="20220302 10:01:22.765" level="INFO">Current page contains text 'NewTip'.</msg>
+<status status="PASS" starttime="20220302 10:01:22.745" endtime="20220302 10:01:22.766"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.271" endtime="20220301 17:20:36.296"/>
+<status status="PASS" starttime="20220302 10:01:22.738" endtime="20220302 10:01:22.766"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:35.971" endtime="20220301 17:20:36.296"/>
+<status status="PASS" starttime="20220302 10:01:22.409" endtime="20220302 10:01:22.766"/>
 </test>
 <test id="s1-s2-t2" name="Submit New Tip With Title And Url And Description">
 <kw name="Go To New Tip" type="SETUP">
@@ -201,21 +201,21 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${NEW TIP URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220301 17:20:36.299" level="INFO">Opening url 'http://localhost:5000/add_tip'</msg>
-<status status="PASS" starttime="20220301 17:20:36.298" endtime="20220301 17:20:36.314"/>
+<msg timestamp="20220302 10:01:22.769" level="INFO">Opening url 'http://localhost:5000/add_tip'</msg>
+<status status="PASS" starttime="20220302 10:01:22.769" endtime="20220302 10:01:22.789"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.298" endtime="20220301 17:20:36.315"/>
+<status status="PASS" starttime="20220302 10:01:22.768" endtime="20220302 10:01:22.789"/>
 </kw>
 <kw name="New Tip Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lisää uusi lukuvinkki</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:36.320" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.315" endtime="20220301 17:20:36.321"/>
+<msg timestamp="20220302 10:01:22.796" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:22.790" endtime="20220302 10:01:22.796"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.315" endtime="20220301 17:20:36.321"/>
+<status status="PASS" starttime="20220302 10:01:22.789" endtime="20220302 10:01:22.796"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.297" endtime="20220301 17:20:36.321"/>
+<status status="PASS" starttime="20220302 10:01:22.768" endtime="20220302 10:01:22.797"/>
 </kw>
 <kw name="Set Title">
 <arg>something</arg>
@@ -223,10 +223,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.322" level="INFO">Typing text 'something' into text field 'title'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.322" endtime="20220301 17:20:36.411"/>
+<msg timestamp="20220302 10:01:22.799" level="INFO">Typing text 'something' into text field 'title'.</msg>
+<status status="PASS" starttime="20220302 10:01:22.798" endtime="20220302 10:01:22.921"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.321" endtime="20220301 17:20:36.411"/>
+<status status="PASS" starttime="20220302 10:01:22.797" endtime="20220302 10:01:22.921"/>
 </kw>
 <kw name="Set URL">
 <arg>https://www.youtube.com/</arg>
@@ -234,10 +234,10 @@
 <arg>url</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.413" level="INFO">Typing text 'https://www.youtube.com/' into text field 'url'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.412" endtime="20220301 17:20:36.505"/>
+<msg timestamp="20220302 10:01:22.923" level="INFO">Typing text 'https://www.youtube.com/' into text field 'url'.</msg>
+<status status="PASS" starttime="20220302 10:01:22.922" endtime="20220302 10:01:23.024"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.411" endtime="20220301 17:20:36.505"/>
+<status status="PASS" starttime="20220302 10:01:22.922" endtime="20220302 10:01:23.025"/>
 </kw>
 <kw name="Set Description">
 <arg>something</arg>
@@ -245,19 +245,19 @@
 <arg>description</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.506" level="INFO">Typing text 'something' into text field 'description'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.506" endtime="20220301 17:20:36.589"/>
+<msg timestamp="20220302 10:01:23.026" level="INFO">Typing text 'something' into text field 'description'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.025" endtime="20220302 10:01:23.130"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.505" endtime="20220301 17:20:36.590"/>
+<status status="PASS" starttime="20220302 10:01:23.025" endtime="20220302 10:01:23.131"/>
 </kw>
 <kw name="Submit Tip">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Lisää uusi vinkki</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.590" level="INFO">Clicking button 'Lisää uusi vinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.590" endtime="20220301 17:20:36.665"/>
+<msg timestamp="20220302 10:01:23.132" level="INFO">Clicking button 'Lisää uusi vinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.132" endtime="20220302 10:01:23.213"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.590" endtime="20220301 17:20:36.666"/>
+<status status="PASS" starttime="20220302 10:01:23.131" endtime="20220302 10:01:23.213"/>
 </kw>
 <kw name="Submit Should Succeed And Contain Tip">
 <arg>something, something, https://www.youtube.com/</arg>
@@ -265,20 +265,20 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lukuvinkkikirjasto</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:36.672" level="INFO">Page title is 'Lukuvinkkikirjasto'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.667" endtime="20220301 17:20:36.672"/>
+<msg timestamp="20220302 10:01:23.220" level="INFO">Page title is 'Lukuvinkkikirjasto'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.215" endtime="20220302 10:01:23.220"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.666" endtime="20220301 17:20:36.672"/>
+<status status="PASS" starttime="20220302 10:01:23.214" endtime="20220302 10:01:23.221"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${message}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220301 17:20:36.690" level="INFO">Current page contains text 'something, something, https://www.youtube.com/'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.672" endtime="20220301 17:20:36.690"/>
+<msg timestamp="20220302 10:01:23.239" level="INFO">Current page contains text 'something, something, https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.221" endtime="20220302 10:01:23.240"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.666" endtime="20220301 17:20:36.690"/>
+<status status="PASS" starttime="20220302 10:01:23.213" endtime="20220302 10:01:23.240"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.296" endtime="20220301 17:20:36.690"/>
+<status status="PASS" starttime="20220302 10:01:22.767" endtime="20220302 10:01:23.240"/>
 </test>
 <test id="s1-s2-t3" name="Submit New Tip With Too Short Title">
 <kw name="Go To New Tip" type="SETUP">
@@ -286,21 +286,21 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${NEW TIP URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220301 17:20:36.694" level="INFO">Opening url 'http://localhost:5000/add_tip'</msg>
-<status status="PASS" starttime="20220301 17:20:36.694" endtime="20220301 17:20:36.709"/>
+<msg timestamp="20220302 10:01:23.245" level="INFO">Opening url 'http://localhost:5000/add_tip'</msg>
+<status status="PASS" starttime="20220302 10:01:23.245" endtime="20220302 10:01:23.263"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.692" endtime="20220301 17:20:36.710"/>
+<status status="PASS" starttime="20220302 10:01:23.242" endtime="20220302 10:01:23.263"/>
 </kw>
 <kw name="New Tip Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lisää uusi lukuvinkki</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:36.716" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.711" endtime="20220301 17:20:36.716"/>
+<msg timestamp="20220302 10:01:23.268" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.263" endtime="20220302 10:01:23.269"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.710" endtime="20220301 17:20:36.717"/>
+<status status="PASS" starttime="20220302 10:01:23.263" endtime="20220302 10:01:23.269"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.692" endtime="20220301 17:20:36.717"/>
+<status status="PASS" starttime="20220302 10:01:23.242" endtime="20220302 10:01:23.269"/>
 </kw>
 <kw name="Set Title">
 <arg>so</arg>
@@ -308,10 +308,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.718" level="INFO">Typing text 'so' into text field 'title'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.718" endtime="20220301 17:20:36.807"/>
+<msg timestamp="20220302 10:01:23.270" level="INFO">Typing text 'so' into text field 'title'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.270" endtime="20220302 10:01:23.361"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.717" endtime="20220301 17:20:36.807"/>
+<status status="PASS" starttime="20220302 10:01:23.269" endtime="20220302 10:01:23.361"/>
 </kw>
 <kw name="Set URL">
 <arg>https://www.youtube.com/</arg>
@@ -319,10 +319,10 @@
 <arg>url</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.808" level="INFO">Typing text 'https://www.youtube.com/' into text field 'url'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.808" endtime="20220301 17:20:36.896"/>
+<msg timestamp="20220302 10:01:23.362" level="INFO">Typing text 'https://www.youtube.com/' into text field 'url'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.362" endtime="20220302 10:01:23.455"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.808" endtime="20220301 17:20:36.896"/>
+<status status="PASS" starttime="20220302 10:01:23.361" endtime="20220302 10:01:23.455"/>
 </kw>
 <kw name="Set Description">
 <arg>something</arg>
@@ -330,19 +330,19 @@
 <arg>description</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.897" level="INFO">Typing text 'something' into text field 'description'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.897" endtime="20220301 17:20:36.979"/>
+<msg timestamp="20220302 10:01:23.456" level="INFO">Typing text 'something' into text field 'description'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.456" endtime="20220302 10:01:23.539"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.897" endtime="20220301 17:20:36.979"/>
+<status status="PASS" starttime="20220302 10:01:23.455" endtime="20220302 10:01:23.540"/>
 </kw>
 <kw name="Submit Tip">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Lisää uusi vinkki</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:36.981" level="INFO">Clicking button 'Lisää uusi vinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:36.980" endtime="20220301 17:20:37.053"/>
+<msg timestamp="20220302 10:01:23.540" level="INFO">Clicking button 'Lisää uusi vinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.540" endtime="20220302 10:01:23.614"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.980" endtime="20220301 17:20:37.053"/>
+<status status="PASS" starttime="20220302 10:01:23.540" endtime="20220302 10:01:23.614"/>
 </kw>
 <kw name="Submit Should Fail With Message">
 <arg>Anna otsikko 3-50 merkin pituisena</arg>
@@ -350,20 +350,20 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lisää uusi lukuvinkki</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:37.058" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.054" endtime="20220301 17:20:37.059"/>
+<msg timestamp="20220302 10:01:23.621" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.616" endtime="20220302 10:01:23.621"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.054" endtime="20220301 17:20:37.059"/>
+<status status="PASS" starttime="20220302 10:01:23.615" endtime="20220302 10:01:23.622"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${message}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220301 17:20:37.076" level="INFO">Current page contains text 'Anna otsikko 3-50 merkin pituisena'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.059" endtime="20220301 17:20:37.076"/>
+<msg timestamp="20220302 10:01:23.639" level="INFO">Current page contains text 'Anna otsikko 3-50 merkin pituisena'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.622" endtime="20220302 10:01:23.639"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.053" endtime="20220301 17:20:37.077"/>
+<status status="PASS" starttime="20220302 10:01:23.615" endtime="20220302 10:01:23.639"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:36.691" endtime="20220301 17:20:37.077"/>
+<status status="PASS" starttime="20220302 10:01:23.241" endtime="20220302 10:01:23.640"/>
 </test>
 <test id="s1-s2-t4" name="Submit New Tip With Too Long Title">
 <kw name="Go To New Tip" type="SETUP">
@@ -371,21 +371,21 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${NEW TIP URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220301 17:20:37.080" level="INFO">Opening url 'http://localhost:5000/add_tip'</msg>
-<status status="PASS" starttime="20220301 17:20:37.079" endtime="20220301 17:20:37.094"/>
+<msg timestamp="20220302 10:01:23.642" level="INFO">Opening url 'http://localhost:5000/add_tip'</msg>
+<status status="PASS" starttime="20220302 10:01:23.642" endtime="20220302 10:01:23.660"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.079" endtime="20220301 17:20:37.095"/>
+<status status="PASS" starttime="20220302 10:01:23.641" endtime="20220302 10:01:23.660"/>
 </kw>
 <kw name="New Tip Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lisää uusi lukuvinkki</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:37.101" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.095" endtime="20220301 17:20:37.101"/>
+<msg timestamp="20220302 10:01:23.667" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.661" endtime="20220302 10:01:23.668"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.095" endtime="20220301 17:20:37.101"/>
+<status status="PASS" starttime="20220302 10:01:23.660" endtime="20220302 10:01:23.668"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.078" endtime="20220301 17:20:37.101"/>
+<status status="PASS" starttime="20220302 10:01:23.641" endtime="20220302 10:01:23.669"/>
 </kw>
 <kw name="Set Title">
 <arg>sofdasfdasfdsafdsafdsafdsafdsafdsafdsafdsadfdfdsafdgfdshgfdhgfdjhgjhgfjhgdjhgfdhgf</arg>
@@ -393,10 +393,10 @@
 <arg>title</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:37.103" level="INFO">Typing text 'sofdasfdasfdsafdsafdsafdsafdsafdsafdsafdsadfdfdsafdgfdshgfdhgfdjhgjhgfjhgdjhgfdhgf' into text field 'title'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.102" endtime="20220301 17:20:37.225"/>
+<msg timestamp="20220302 10:01:23.671" level="INFO">Typing text 'sofdasfdasfdsafdsafdsafdsafdsafdsafdsafdsadfdfdsafdgfdshgfdhgfdjhgjhgfjhgdjhgfdhgf' into text field 'title'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.670" endtime="20220302 10:01:23.796"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.102" endtime="20220301 17:20:37.225"/>
+<status status="PASS" starttime="20220302 10:01:23.669" endtime="20220302 10:01:23.797"/>
 </kw>
 <kw name="Set URL">
 <arg>https://www.youtube.com/</arg>
@@ -404,10 +404,10 @@
 <arg>url</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:37.226" level="INFO">Typing text 'https://www.youtube.com/' into text field 'url'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.226" endtime="20220301 17:20:37.310"/>
+<msg timestamp="20220302 10:01:23.798" level="INFO">Typing text 'https://www.youtube.com/' into text field 'url'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.798" endtime="20220302 10:01:23.890"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.225" endtime="20220301 17:20:37.310"/>
+<status status="PASS" starttime="20220302 10:01:23.797" endtime="20220302 10:01:23.890"/>
 </kw>
 <kw name="Set Description">
 <arg>something</arg>
@@ -415,19 +415,19 @@
 <arg>description</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:37.311" level="INFO">Typing text 'something' into text field 'description'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.311" endtime="20220301 17:20:37.390"/>
+<msg timestamp="20220302 10:01:23.891" level="INFO">Typing text 'something' into text field 'description'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.891" endtime="20220302 10:01:23.973"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.310" endtime="20220301 17:20:37.390"/>
+<status status="PASS" starttime="20220302 10:01:23.891" endtime="20220302 10:01:23.974"/>
 </kw>
 <kw name="Submit Tip">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Lisää uusi vinkki</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220301 17:20:37.391" level="INFO">Clicking button 'Lisää uusi vinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.391" endtime="20220301 17:20:37.457"/>
+<msg timestamp="20220302 10:01:23.975" level="INFO">Clicking button 'Lisää uusi vinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:23.974" endtime="20220302 10:01:24.045"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.390" endtime="20220301 17:20:37.458"/>
+<status status="PASS" starttime="20220302 10:01:23.974" endtime="20220302 10:01:24.045"/>
 </kw>
 <kw name="Submit Should Fail With Message">
 <arg>Anna otsikko 3-50 merkin pituisena</arg>
@@ -435,28 +435,28 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Lisää uusi lukuvinkki</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220301 17:20:37.485" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.459" endtime="20220301 17:20:37.486"/>
+<msg timestamp="20220302 10:01:24.071" level="INFO">Page title is 'Lisää uusi lukuvinkki'.</msg>
+<status status="PASS" starttime="20220302 10:01:24.046" endtime="20220302 10:01:24.071"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.458" endtime="20220301 17:20:37.486"/>
+<status status="PASS" starttime="20220302 10:01:24.046" endtime="20220302 10:01:24.072"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${message}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220301 17:20:37.501" level="INFO">Current page contains text 'Anna otsikko 3-50 merkin pituisena'.</msg>
-<status status="PASS" starttime="20220301 17:20:37.486" endtime="20220301 17:20:37.502"/>
+<msg timestamp="20220302 10:01:24.087" level="INFO">Current page contains text 'Anna otsikko 3-50 merkin pituisena'.</msg>
+<status status="PASS" starttime="20220302 10:01:24.072" endtime="20220302 10:01:24.087"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.458" endtime="20220301 17:20:37.502"/>
+<status status="PASS" starttime="20220302 10:01:24.045" endtime="20220302 10:01:24.088"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:37.077" endtime="20220301 17:20:37.502"/>
+<status status="PASS" starttime="20220302 10:01:23.640" endtime="20220302 10:01:24.088"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220301 17:20:37.504" endtime="20220301 17:20:37.559"/>
+<status status="PASS" starttime="20220302 10:01:24.090" endtime="20220302 10:01:24.145"/>
 </kw>
-<status status="PASS" starttime="20220301 17:20:35.150" endtime="20220301 17:20:37.559"/>
+<status status="PASS" starttime="20220302 10:01:21.566" endtime="20220302 10:01:24.145"/>
 </suite>
-<status status="PASS" starttime="20220301 17:20:33.619" endtime="20220301 17:20:37.562"/>
+<status status="PASS" starttime="20220302 10:01:19.850" endtime="20220302 10:01:24.148"/>
 </suite>
 <statistics>
 <total>
