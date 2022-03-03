@@ -36,6 +36,5 @@ jobs:
         run: poetry run coverage xml
       - name: Coverage report to Codecov
         uses: codecov/codecov-action@v2
-      - name: Robot Framework
-        uses: joonvena/robotframework-docker-action@v1.0
+
 
