@@ -3,12 +3,12 @@
 python src/initialize_database.py
 # käynnistetään Flask-palvelin taustalle
 export FLASK_APP=src/app
-flask run --port 5111 &
+flask run --port 5111 
 
 
 
 # suoritetaan testit
-robot src/tests
+poetry run robot src/e2e
 
 status=$?
 
