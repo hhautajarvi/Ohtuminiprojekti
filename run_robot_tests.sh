@@ -8,7 +8,7 @@ flask run --port 5111
 
 
 # suoritetaan testit
-poetry run robot src/e2e
+robot src/e2e
 
 status=$?
 
