@@ -1,7 +1,8 @@
 #!/bin/bash
-
+python src/initialize_database.py
 # käynnistetään Flask-palvelin taustalle
-flask run src/app.py&
+export FLASK_APP=src/app
+flask run --port 5002 &
 
 # odetetaan, että palvelin on valmiina ottamaan vastaan pyyntöjä
 while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:5000/ping)" != "200" ]]; 
