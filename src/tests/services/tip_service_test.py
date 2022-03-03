@@ -2,9 +2,11 @@ import unittest
 from services.tip_service import TipService
 from repositories.tip_repository import TipRepository
 from database import database_connection
+from initialize_database import initialize_database
 
 class TestTipService(unittest.TestCase):
     def setUp(self):
+        initialize_database()
         self.tip_repository = TipRepository(database_connection)
         self.tip_service = TipService()
 
@@ -26,3 +28,10 @@ class TestTipService(unittest.TestCase):
         description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec p"
         with self.assertRaises(Exception):
             self.tip_service.add_new_tip("testiotsikko", "testiurl", description, 1)
+
+    def test_get_visible_tips_only_returns_visible_tips(self):
+        self.tip_service.add_new_tip("testiotsikko", "testiurl", "kuvaus", 1)
+        self.tip_service.add_new_tip("testiotsikko", "testiurl", "kuvaus", 1)
+        self.tip_service.delete_tip(1)
+        tips = self.tip_service.get_visible_tips()
+        self.assertEqual(len(tips),1)
