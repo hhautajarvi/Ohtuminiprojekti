@@ -56,6 +56,24 @@ def register_new_user():
         flash(str(error))
         return redirect_to_register()
 
+@app.route("/login", methods=["GET"])
+def render_login():
+    return render_template("login.html")
+
+@app.route("/login", methods=["POST"])
+def try_login():
+        username= request.form.get("username")
+        password = request.form.get("password")
+
+        try: 
+            user_service.login(username, password)
+            flash(str("Kirjauduit sisään"))
+            return redirect_to_index()
+        except Exception as error:
+            flash(str(error))
+            return redirect_to_login()
+
+
 def redirect_to_add_tip():
     return redirect(url_for("render_add_tip"))
 
@@ -64,3 +82,6 @@ def redirect_to_index():
 
 def redirect_to_register():
     return redirect(url_for("render_register"))
+
+def redirect_to_login():
+    return redirect(url_for("render_login"))

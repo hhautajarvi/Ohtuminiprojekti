@@ -22,7 +22,10 @@ class UserService:
             raise UserInputError("Salasana ja salasanan vahvistus eivät täsmää.")
 
     def login(self, username, password):
-        pass
+        if not self._user_repository.check_password(username, password):
+            raise UserInputError('Käyttäjätunnus tai salasana eivät täsmää')
+        
+        return True
 
     def logout(self):
         pass

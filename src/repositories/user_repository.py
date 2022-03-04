@@ -23,5 +23,13 @@ class UserRepository:
             return False
         else:
             return True
+    def check_password(self, username, password):
+        cursor=self.connection.cursor()
+        sql = "SELECT password FROM user WHERE login_name=:login_name and password=:password"
+        result = cursor.execute(sql, {"login_name":username, "password":password})
+        password = result.fetchone()
+        if password == None:
+            return False
+        return True
 
 user_repository = UserRepository(database_connection)
