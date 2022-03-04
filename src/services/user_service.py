@@ -1,4 +1,6 @@
 from repositories.user_repository import user_repository as default_user_repository
+from flask import session
+import secrets
 
 class UserInputError(Exception):
     pass
@@ -24,8 +26,15 @@ class UserService:
     def login(self, username, password):
         if not self._user_repository.check_password(username, password):
             raise UserInputError('Käyttäjätunnus tai salasana eivät täsmää')
-        
-        return True
+        self._set_session(username)
+
+    def _set_session(self, username):
+        name_and_id = self._user_repository.get_name_and_id(username)
+
+        session["name"] = name_and_id[0]
+        session["user_id"] = name_and_id[1]
+        session["scrf_token"] = secrets.token_hex(16)
+
 
     def logout(self):
         pass

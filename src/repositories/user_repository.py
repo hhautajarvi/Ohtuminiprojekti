@@ -32,4 +32,12 @@ class UserRepository:
             return False
         return True
 
+    def get_name_and_id(self, username):
+        cursor=self.connection.cursor()
+        sql = "SELECT name, id FROM user WHERE login_name=:login_name"
+        result = cursor.execute(sql, {"login_name":username}).fetchone()
+        name = result[0]
+        id = result[1]
+        return name, id
+
 user_repository = UserRepository(database_connection)
