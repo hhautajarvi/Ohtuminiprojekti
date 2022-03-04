@@ -4,8 +4,7 @@ python src/initialize_database.py
 # käynnistetään Flask-palvelin taustalle
 export FLASK_APP=src/app
 flask run --port 5000 &
-
-
+ 
 
 # suoritetaan testit
 robot src/tests
