@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, request, flash, redirect, url_for
+from flask import render_template, request, flash, redirect, url_for, session
 from services.tip_service import tip_service
 from services.user_service import user_service
 
@@ -27,7 +27,7 @@ def add_new_tip():
     title = request.form.get("title")
     url = request.form.get("url")
     description = request.form.get("description")
-    user_id = 1 #placeholder before users added
+    user_id = session.get("user_id") if session else None
 
     try:
         tip_service.add_new_tip(title, url, description, user_id)

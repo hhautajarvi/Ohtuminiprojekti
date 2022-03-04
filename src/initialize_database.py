@@ -30,7 +30,7 @@ def create_tables(connection):
             title TEXT NOT NULL,
             url TEXT, 
             description TEXT,
-            user_id INTEGER NOT NULL,
+            user_id INTEGER REFERENCES user,
             visible BOOLEAN NOT NULL
         );
     ''')
