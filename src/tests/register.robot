@@ -1,5 +1,6 @@
 *** Settings ***
 Resource  resource.robot
+Resource  login_resource.robot
 Suite Setup  Open And Configure Browser
 Suite Teardown  Close Browser
 Test Setup  Go To Register Page
@@ -73,14 +74,6 @@ Submit Register Credentials
 Set Name
     [Arguments]  ${name}
     Input Text  name  ${name}
-
-Set Username
-    [Arguments]  ${username}
-    Input Text  username  ${username}
-
-Set Password
-    [Arguments]  ${password}
-    Input Password  password  ${password}
 
 Set Password Confirmation
     [Arguments]  ${password_confirmation}
