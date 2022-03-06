@@ -12,7 +12,7 @@ Register With Valid Username And Password
     Set Password  salasana13
     Set Password Confirmation  salasana13
     Submit Register Credentials
-    Register Should Succeed
+    Register Should Succeed With Message  Olet kirjautunut sisään
 
 Register With Nonmatching Password And Password Confirmation
     Set Name  Seppo
@@ -62,8 +62,10 @@ Register With Username Already Taken
 
 *** Keywords ***
 
-Register Should Succeed
+Register Should Succeed With Message
+    [Arguments]  ${message}
     Home Page Should Be Open
+    Page Should Contain  ${message}
 
 Submit Register Credentials
     Click Button  Rekisteröidy
