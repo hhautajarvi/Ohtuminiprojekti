@@ -50,6 +50,7 @@ def register_new_user():
 
     try:
         user_service.create_user(name, username, password, password_confirmation)
+        user_service.login(username, password)
         flash(str("Käyttäjätunnus on rekisteröity."))
         return redirect_to_index()
     except Exception as error:
