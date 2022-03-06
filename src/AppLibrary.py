@@ -18,5 +18,14 @@ class AppLibrary:
             'description':description
         }
         requests.post(f'{self._base_url}/add_tip', data=data)
+
+    def create_user(self, name, username, password):
+        data = {
+            "name": name,
+            "username": username,
+            "password": password,
+            "password_confirmation": password
+        }
+        requests.post(f'{self._base_url}/register', data=data)
     
 
