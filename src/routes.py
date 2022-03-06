@@ -63,16 +63,22 @@ def render_login():
 
 @app.route("/login", methods=["POST"])
 def try_login():
-        username= request.form.get("username")
-        password = request.form.get("password")
+    username= request.form.get("username")
+    password = request.form.get("password")
 
-        try: 
-            user_service.login(username, password)
-            flash(str("Kirjauduit sisään"))
-            return redirect_to_index()
-        except Exception as error:
-            flash(str(error))
-            return redirect_to_login()
+    try: 
+        user_service.login(username, password)
+        flash(str("Kirjauduit sisään"))
+        return redirect_to_index()
+    except Exception as error:
+        flash(str(error))
+        return redirect_to_login()
+
+@app.route("/logout")
+def logout():
+        user_service.logout()
+        flash(str("Kirjauduit ulos"))
+        return redirect_to_index()
 
 
 def redirect_to_add_tip():

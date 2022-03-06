@@ -35,8 +35,7 @@ class UserService:
         session["user_id"] = name_and_id[1]
         session["scrf_token"] = secrets.token_hex(16)
 
-
     def logout(self):
-        pass
+        del session["user_id"]
 
 user_service = UserService()
