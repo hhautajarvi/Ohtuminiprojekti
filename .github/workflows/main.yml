@@ -42,6 +42,6 @@ jobs:
         run: poetry run coverage xml
       - name: Coverage report to Codecov
         uses: codecov/codecov-action@v2
-
-
+      - name: pylint
+	uses: poetry run pylint src
 
