@@ -17,6 +17,7 @@ robotframework = "^4.1.3"
 pytest-dotenv = "^0.5.2"
 requests = "^2.27.1"
 robotframework-seleniumlibrary = "^6.0.0"
+pylint = "^2.12.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
