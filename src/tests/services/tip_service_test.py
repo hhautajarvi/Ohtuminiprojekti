@@ -12,8 +12,8 @@ class TestTipService(unittest.TestCase):
 
     def test_add_new_tip_successful(self):
         self.tip_service.add_new_tip("testiotsikko", "testiurl", "kuvaus", 1)
-        list = self.tip_repository.get_tips()
-        title = list[0].title
+        tip_list = self.tip_repository.get_tips()
+        title = tip_list[0].title
         self.assertEqual("testiotsikko",title)
 
     def test_add_new_tip_title_too_long(self):

@@ -11,7 +11,7 @@ class UserRepository:
                 " VALUES (?, ?, ?)", (login_name, password, name))
             self.connection.commit()
         except:
-            return False       
+            return False
         return True
 
     def get_user(self, username):
@@ -19,16 +19,16 @@ class UserRepository:
         sql = "SELECT login_name FROM user WHERE login_name=:username"
         result = cursor.execute(sql, {"username":username})
         user = result.fetchone()
-        if user == None:
+        if user is None:
             return False
-        else:
-            return True
+        return True
+
     def check_password(self, username, password):
         cursor=self.connection.cursor()
         sql = "SELECT password FROM user WHERE login_name=:login_name and password=:password"
         result = cursor.execute(sql, {"login_name":username, "password":password})
         password = result.fetchone()
-        if password == None:
+        if password is None:
             return False
         return True
 
@@ -37,7 +37,7 @@ class UserRepository:
         sql = "SELECT name, id FROM user WHERE login_name=:login_name"
         result = cursor.execute(sql, {"login_name":username}).fetchone()
         name = result[0]
-        id = result[1]
-        return name, id
+        user_id = result[1]
+        return name, user_id
 
 user_repository = UserRepository(database_connection)

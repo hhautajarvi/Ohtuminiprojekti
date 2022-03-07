@@ -1,6 +1,6 @@
-from repositories.user_repository import user_repository as default_user_repository
-from flask import session
 import secrets
+from flask import session
+from repositories.user_repository import user_repository as default_user_repository
 
 class UserInputError(Exception):
     pass

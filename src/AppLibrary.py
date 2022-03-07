@@ -7,10 +7,10 @@ class AppLibrary:
         self._base_url = 'http://localhost:5000'
 
         self.reset_application()
-    
+
     def reset_application(self):
         initialize_database()
-    
+
     def create_tip(self, title, url, description):
         data = {
             'title': title,
@@ -27,5 +27,3 @@ class AppLibrary:
             "password_confirmation": password
         }
         requests.post(f'{self._base_url}/register', data=data)
-    
-

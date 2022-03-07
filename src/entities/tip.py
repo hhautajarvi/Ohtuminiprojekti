@@ -1,6 +1,6 @@
 class Tip:
     def __init__(self, id, title, url, description, user_id, visible):
-        self.id = id
+        self.tip_id = id
         self.title = title
         self.url = url
         self.description = description

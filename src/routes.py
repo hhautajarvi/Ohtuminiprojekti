@@ -1,5 +1,5 @@
-from app import app
 from flask import render_template, request, flash, redirect, url_for, session
+from app import app
 from services.tip_service import tip_service
 from services.user_service import user_service
 
@@ -66,7 +66,7 @@ def try_login():
     username= request.form.get("username")
     password = request.form.get("password")
 
-    try: 
+    try:
         user_service.login(username, password)
         flash(str("Kirjauduit sisään"))
         return redirect_to_index()
@@ -76,9 +76,9 @@ def try_login():
 
 @app.route("/logout")
 def logout():
-        user_service.logout()
-        flash(str("Kirjauduit ulos"))
-        return redirect_to_index()
+    user_service.logout()
+    flash(str("Kirjauduit ulos"))
+    return redirect_to_index()
 
 
 def redirect_to_add_tip():

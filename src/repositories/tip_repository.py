@@ -23,14 +23,14 @@ class TipRepository:
         rows = cursor.fetchall()
         return list(map(get_tip_by_row, rows))
 
-    def hide_tip(self, id):
+    def hide_tip(self, tip_id):
         """Asettaa lukuvinkkitaulun visible-sarakkeeseen arvon False.
         Metodin avulla voidaan piilottaa haluttu rivi."""
 
         cursor = self.connection.cursor()
         try:
             sql = """UPDATE Tip SET visible=? WHERE id=?"""
-            cursor.execute(sql, (0, id))
+            cursor.execute(sql, (0, tip_id))
             self.connection.commit()
         except:
             return False

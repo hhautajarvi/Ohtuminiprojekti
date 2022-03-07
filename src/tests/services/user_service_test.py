@@ -1,9 +1,9 @@
 import unittest
+from unittest.mock import patch
 from services.user_service import UserInputError, UserService
 from repositories.user_repository import UserRepository
 from database import database_connection
 from initialize_database import initialize_database
-from unittest.mock import patch
 
 
 class UserServiceTest(unittest.TestCase):
