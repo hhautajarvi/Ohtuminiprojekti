@@ -1,4 +1,4 @@
-from isbnlib import meta
+from isbnlib import meta, notisbn
 from repositories.tip_repository import tip_repository as default_tip_repository
 
 SERVICE = "goob" #Bookservice for isbn-metadata. 'goob' for Google Books service
@@ -20,6 +20,8 @@ class TipService:
     def add_isbn_tip(self, isbn_number, isbn_description, user_id):
         if len(isbn_number) == 0:
             raise Exception("Anna ISBN-numero")
+        if notisbn(isbn_number, level='strict'):
+            raise Exception("Numero ei ole kelpaava ISBN-numero")
         try:
             book = meta(isbn_number, SERVICE)
         except:
