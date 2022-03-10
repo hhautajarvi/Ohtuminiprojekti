@@ -24,11 +24,11 @@ class TipService:
             raise Exception("Numero ei ole kelpaava ISBN-numero")
         try:
             book = meta(isbn_number, SERVICE)
+            author = ', '.join(book["Authors"])
         except:
             raise Exception("ISBN-numerolla ei löytynyt kirjaa")
         if len(isbn_description) > 300:
             raise Exception("Anna enintään 300 merkin pituinen kuvaus")
-        author = ', '.join(book["Authors"])
         url = ""
         self._tip_repository.add_tip(book["Title"], author, url, isbn_description, user_id)
 

@@ -62,6 +62,10 @@ class TestTipService(unittest.TestCase):
         with self.assertRaises(Exception):
             self.tip_service.add_isbn_tip("111", "kuvaus", 1)
 
+    def test_add_isbn_tip_isbn_not_found(self):
+        with self.assertRaises(Exception):
+            self.tip_service.add_isbn_tip("9789511253044", "kuvaus", 1)
+
     def test_add_isbn_tip_description_too_long(self):
         with self.assertRaises(Exception):
             self.tip_service.add_isbn_tip("9780446310789", LOREM_LIPSUM, 1)
