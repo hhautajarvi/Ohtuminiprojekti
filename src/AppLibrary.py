@@ -11,9 +11,10 @@ class AppLibrary:
     def reset_application(self):
         initialize_database()
 
-    def create_tip(self, title, url, description):
+    def create_tip(self, title, author, url, description):
         data = {
             'title': title,
+            'author': author,
             'url': url,
             'description':description
         }

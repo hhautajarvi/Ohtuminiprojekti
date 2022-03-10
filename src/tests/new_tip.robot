@@ -10,12 +10,13 @@ Submit New Tip With Title
     Submit Tip 
     Submit Should Succeed And Contain Tip  NewTip
 
-Submit New Tip With Title And Url And Description
+Submit New Tip With Author And Title And Url And Description
     Set Title  something
+    Set Author  author_name
     Set URL  https://www.youtube.com/
     Set Description  something
     Submit Tip 
-    Submit Should Succeed And Contain Tip  something, something, https://www.youtube.com/
+    Submit Should Succeed And Contain Tip  something, author_name, something, https://www.youtube.com/
 
 Submit New Tip With Too Short Title
     Set Title  so
@@ -39,6 +40,10 @@ Go To New Tip
 Set Title
     [Arguments]  ${Title}
     Input Text  title  ${title}
+
+Set Author
+    [Arguments]  ${Author}
+    Input Text  author  ${author}
 
 Set URL
     [Arguments]  ${Title}

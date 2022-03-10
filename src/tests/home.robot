@@ -13,7 +13,7 @@ No Previous Tips
     Page Should Contain  Ei vielä lisättyjä lukuvinkkejä
 
 Create Tip And Check If It Is Visible
-    Create Tip  test  test  test
+    Create Tip  test  test  test  test
     Go To Home Page
     Home Page Should Be Open
     Page Should Contain  test  
