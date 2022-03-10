@@ -16,7 +16,7 @@ Submit New Tip With Author And Title And Url And Description
     Set URL  https://www.youtube.com/
     Set Description  something
     Submit Tip 
-    Submit Should Succeed And Contain Tip  something, author_name, something, https://www.youtube.com/
+    Submit Should Succeed And Contain Tip  something, author_name, something
 
 Submit New Tip With Too Short Title
     Set Title  so
