@@ -27,9 +27,14 @@ Lukuvinkkikirjasto
 <form action="/" method="POST">
 <ul>
     {% for tip in tips %}
-    <li><b>{{ tip.title }}</b>, {{ tip.author }}, {{ tip.description }}, {{ tip.url }}
+      <li>
+        {% if tip.url %}
+        <a href="{{ tip.url }}" target=”_blank”>{{ tip.title }}</a>, {{ tip.author }}, {{ tip.description }}
+        {% else %}
+        <b>{{ tip.title }}</b>, {{ tip.author }}, {{ tip.description }}
+        {% endif %}
         <button type="submit" name="delete" value="{{ tip.id }}">Poista</button>
-    </li>
+      </li>
     {% endfor %}
 </ul>
 </form>
