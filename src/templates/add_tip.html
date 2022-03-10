@@ -20,24 +20,44 @@ Lisää uusi lukuvinkki
     <div>
         <label for="title">Lukuvinkin otsikko</label>
         <input type="text" name="title" id="title" /> *
-      </div>
-  
+    </div>
+    
     <div>
-      <label for="url">Lukuvinkin url-osoite</label>
-      <input type="url" name="url" id="url" />
+        <label for="author">Lukuvinkin kirjoittaja</label>
+        <input type="text" name="author" id="author" />
     </div>
   
     <div>
-    <label for="description">Lukuvinkin kuvaus</label>
-    <input type="text" name="description" id="description" />
+        <label for="url">Lukuvinkin url-osoite</label>
+        <input type="url" name="url" id="url" />
+    </div>
+  
+    <div>
+        <label for="description">Lukuvinkin kuvaus</label>
+        <input type="text" name="description" id="description" />
     </div>
   
     <button>
-      Lisää uusi vinkki
+        Lisää uusi vinkki
     </button>
-    <br>
-    Pakollinen tieto *
-    <br>
-  </form>
-
+</form>
+<br>
+<br>
+<h3>Tai lisää kirjavinkki ISBN-numeron avulla</h3>
+<form action="/add_isbn_tip" method="POST">
+    <div>
+        <label for="isbn_number">Lukuvinkin ISBN-numero</label>
+        <input type="text" name="isbn_number" id="isbn_number" /> *
+      </div>
+    <div>
+        <label for="isbn_description">Lukuvinkin kuvaus</label>
+        <input type="text" name="isbn_description" id="isbn_description" />
+    </div>
+    <button>
+        Lisää ISBN-vinkki
+    </button>
+</form>
+<br>
+Pakollinen tieto *
+<br>
 {% endblock %}
