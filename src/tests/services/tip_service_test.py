@@ -18,19 +18,26 @@ class TestTipService(unittest.TestCase):
 
     def test_add_new_tip_title_too_long(self):
         with self.assertRaises(Exception):
-            self.tip_service.add_new_tip("testiotsikko111111111111111111111111111111111111111", "testikirjoittaja", "testiurl", "kuvaus", 1)
+            self.tip_service.add_new_tip("testiotsikko111111111111111111111111111111111111111", \
+                 "testikirjoittaja", "testiurl", "kuvaus", 1)
 
     def test_add_new_tip_title_too_short(self):
         with self.assertRaises(Exception):
             self.tip_service.add_new_tip("t", "testikirjoittaja", "testiurl", "kuvaus", 1)
 
     def test_add_new_tip_description_too_long(self):
-        description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec p"
+        description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean " \
+            "commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis " \
+            "dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, " \
+            "pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec p"
         with self.assertRaises(Exception):
             self.tip_service.add_new_tip("testiotsikko","testikirjoittaja", "testiurl", description, 1)
 
     def test_add_new_tip_author_too_long(self):
-        author = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec p"
+        author = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean " \
+            "commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis " \
+            "dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, " \
+            "pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec p"
         with self.assertRaises(Exception):
             self.tip_service.add_new_tip("testiotsikko", author, "testiurl", "kuvaus", 1)
 

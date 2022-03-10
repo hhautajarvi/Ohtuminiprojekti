@@ -1,7 +1,7 @@
 from isbnlib import meta
 from repositories.tip_repository import tip_repository as default_tip_repository
 
-SERVICE = "goob" #Bookservice for isbn-metadata. 'goob' for Google Books service 
+SERVICE = "goob" #Bookservice for isbn-metadata. 'goob' for Google Books service
                 #'openl' for OpenLibrary.org and 'wiki' for wikipedia.org
 
 class TipService:
@@ -12,7 +12,7 @@ class TipService:
         if len(title) < 3 or len(title) > 50:
             raise Exception("Anna otsikko 3-50 merkin pituisena")
         if len(author) > 100:
-            raise Exception("Anna kirjoittajan nimi enintään 100 merkin pituisena")    
+            raise Exception("Anna kirjoittajan nimi enintään 100 merkin pituisena")
         if len(description) > 300:
             raise Exception("Anna enintään 300 merkin pituinen kuvaus")
         self._tip_repository.add_tip(title, author, url, description, user_id)

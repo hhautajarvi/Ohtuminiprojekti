@@ -50,7 +50,7 @@ def add_isbn_tip():
 
     except Exception as error:
         flash(str(error))
-        return redirect_to_add_tip()        
+        return redirect_to_add_tip()
 
 @app.route("/register", methods=["GET"])
 def render_register():

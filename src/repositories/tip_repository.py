@@ -2,7 +2,8 @@ from database import database_connection
 from entities.tip import Tip
 
 def get_tip_by_row(row):
-    return Tip(row['id'], row['title'], row["author"], row['url'], row['description'], row['user_id'], row['visible']) if row else None
+    return Tip(row['id'], row['title'], row["author"], row['url'], \
+        row['description'], row['user_id'], row['visible']) if row else None
 
 class TipRepository:
     def __init__(self, connection):
