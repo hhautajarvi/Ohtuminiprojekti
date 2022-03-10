@@ -25,17 +25,32 @@ def render_add_tip():
 @app.route("/add_tip", methods=["POST"])
 def add_new_tip():
     title = request.form.get("title")
+    author = request.form.get("author")
     url = request.form.get("url")
     description = request.form.get("description")
     user_id = session.get("user_id") if session else None
 
     try:
-        tip_service.add_new_tip(title, url, description, user_id)
+        tip_service.add_new_tip(title, author, url, description, user_id)
         return redirect_to_index()
 
     except Exception as error:
         flash(str(error))
         return redirect_to_add_tip()
+
+@app.route("/add_isbn_tip", methods=["POST"])
+def add_isbn_tip():
+    isbn_number = request.form.get("isbn_number")
+    isbn_description = request.form.get("isbn_description")
+    user_id = session.get("user_id") if session else None
+
+    try:
+        tip_service.add_isbn_tip(isbn_number, isbn_description, user_id)
+        return redirect_to_index()
+
+    except Exception as error:
+        flash(str(error))
+        return redirect_to_add_tip()        
 
 @app.route("/register", methods=["GET"])
 def render_register():
