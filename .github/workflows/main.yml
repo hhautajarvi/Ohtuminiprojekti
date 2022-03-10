@@ -26,6 +26,8 @@ jobs:
         run: pip install robotframework
       - name: selenium install
         run: pip install --upgrade robotframework-seleniumlibrary
+      - name: isbnlib install
+        run: pip install isbnlib
       - name: Setup chromedriver
         uses: nanasess/setup-chromedriver@master
       - run: |
