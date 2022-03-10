@@ -28,6 +28,7 @@ def create_tables(connection):
         create table tip (
             id INTEGER NOT NULL PRIMARY KEY,
             title TEXT NOT NULL,
+            author TEXT,
             url TEXT, 
             description TEXT,
             user_id INTEGER REFERENCES user,
