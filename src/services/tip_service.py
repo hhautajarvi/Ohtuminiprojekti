@@ -9,6 +9,8 @@ class TipService:
         self._tip_repository = tip_repository
 
     def add_new_tip(self, title, author, url, description, user_id):
+        if user_id == None:
+            raise Exception ('Et ole kirjautunut sisään')
         if len(title) < 3 or len(title) > 50:
             raise Exception("Anna otsikko 3-50 merkin pituisena")
         if len(author) > 100:

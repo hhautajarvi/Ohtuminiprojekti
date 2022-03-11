@@ -7,9 +7,19 @@ Lukuvinkkikirjasto
 {% block body %}
 <h1>Lukuvinkkikirjasto</h1>
 
-<ul>
-    <li><a href="/add_tip">Lisää uusi vinkki</a></li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <ul class="navbar-nav">
+      {% if session.user_id %}
+      <li class="nav-item">
+        <a class="nav-link" href="/add_tip">Lisää uusi vinkki</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <span class="navbar-text">Kirjaudu sisään tai registeröidy lisääkseen uuden vinkin</span>
+      </li>
+      {% endif %}
+    </ul>
+</nav>
 
 <h2>Lisätyt lukuvinkit</h2>
 
@@ -33,7 +43,9 @@ Lukuvinkkikirjasto
         {% else %}
         <b>{{ tip.title }}</b>, {{ tip.author }}, {{ tip.description }}
         {% endif %}
+        {% if tip.user_id == session.user_id%}
         <button type="submit" name="delete" value="{{ tip.id }}">Poista</button>
+        {% endif %}
       </li>
     {% endfor %}
 </ul>
