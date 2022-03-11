@@ -32,6 +32,29 @@ Submit New Tip With Too Long Title
     Submit Tip 
     Submit Should Fail With Message  Anna otsikko 3-50 merkin pituisena
 
+Submit New Tip With ISBN
+    Set ISBN   9789511236764
+    Submit ISBN Tip
+    Submit Should Succeed And Contain Tip  Kalevala
+
+Submit New Tip With ISBN And Description
+    Set ISBN   9789511236764
+    Set ISBN-description  testikirja
+    Submit ISBN Tip
+    Submit Should Succeed And Contain Tip  testikirja
+
+Submit New Tip With Non-ISBN Number
+    Set ISBN   123
+    Set ISBN-description  testikirja
+    Submit ISBN Tip
+    Submit Should Fail With Message  Numero ei ole kelpaava ISBN-numero
+
+Submit New Tip With Nonexistent ISBN
+    Set ISBN   9789510466810
+    Set ISBN-description  testikirja
+    Submit ISBN Tip
+    Submit Should Fail With Message  ISBN-numerolla ei löytynyt kirjaa
+
 ***Keywords***
 Go To New Tip
     Go To New Tip Page
@@ -53,8 +76,19 @@ Set Description
     [Arguments]  ${Title}
     Input Text  description  ${title}
 
+Set ISBN
+    [Arguments]  ${Title}
+    Input Text  isbn_number  ${title}
+
+Set ISBN-description
+    [Arguments]  ${Title}
+    Input Text  isbn_description  ${title}
+
 Submit Tip 
     Click Button  Lisää uusi vinkki
+
+Submit ISBN Tip
+    Click Button  Lisää ISBN-vinkki
 
 Submit Should Succeed And Contain Tip 
     [Arguments]  ${message}
