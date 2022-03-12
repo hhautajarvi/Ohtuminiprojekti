@@ -42,4 +42,7 @@ class TipService:
     def delete_tip(self, tip_id):
         return self._tip_repository.hide_tip(tip_id)
 
+    def get_searched_tips(self, query):
+        return self._tip_repository.get_searched_tips(query)
+
 tip_service = TipService()

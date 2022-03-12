@@ -24,6 +24,18 @@ class TipRepository:
         rows = cursor.fetchall()
         return list(map(get_tip_by_row, rows))
 
+    def get_searched_tips(self, query):
+        """Palauttaa vinkkien otsikoista haetut tulokset"""
+
+        cursor = self.connection.cursor()
+        try:
+            sql = """SELECT id, title, author, url, description, user_id FROM Tip WHERE title LIKE ? AND visible=1"""
+            cursor.execute(sql, (query))
+            rows = cursor.fetchall()
+        except:
+            return []
+        return rows
+
     def hide_tip(self, tip_id):
         """Asettaa lukuvinkkitaulun visible-sarakkeeseen arvon False.
         Metodin avulla voidaan piilottaa haluttu rivi."""
