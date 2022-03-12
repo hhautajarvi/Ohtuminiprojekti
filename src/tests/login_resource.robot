@@ -12,19 +12,20 @@ Submit Login Credentials
     Click Button  Lähetä
 
 Create User And Login
-    Create User  Seppo  seppo52  seppo123
+    [Arguments]  ${name}  ${username}  ${password}
+    Create User  ${username}  ${username}  ${password}
     Go To Login Page
-    Set Username  seppo52
-    Set Password  seppo123
+    Set Username  ${username}
+    Set Password  ${password}
     Submit Login Credentials
 
 Create User, Login And Go To Home Page
-    Create User And Login
+    Create User And Login  seppo  seppo52  seppo123
     Go To Home Page
     Home Page Should Be Open
 
 Create User, Login And Go To New Tip
-    Create User And Login
+    Create User And Login  seppo  seppo52  seppo123
     Go To New Tip
 
 Logout

@@ -43,4 +43,14 @@ Submit Should Fail With Message
     New Tip Page Should Be Open
     Page Should Contain  ${message}
 
+Create Tip And Go To Home Page
+    [Arguments]  ${Title}  ${Author}  ${Url}  ${Description}
+    Go To New Tip Page
+    Set Title  ${Title}
+    Set Author  ${Author}
+    Set URL  ${Url}
+    Set Description  ${Description}
+    Submit Tip
+    Go To Home Page
+    Home Page Should Be Open
 
