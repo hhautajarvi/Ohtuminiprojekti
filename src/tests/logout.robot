@@ -18,10 +18,3 @@ Logout Should Succeed With Message
     Home Page Should Be Open
     Page Should Contain  ${message} 
 
-Create User, Login And Go To Home Page
-    Create User  Seppo  seppo52  seppo123
-    Go To Login Page
-    Set Username  seppo52
-    Set Password  seppo123
-    Submit Login Credentials
-    Home Page Should Be Open

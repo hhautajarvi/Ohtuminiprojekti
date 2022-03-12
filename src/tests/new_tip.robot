@@ -1,8 +1,10 @@
 ***Settings***
 Resource  resource.robot
+Resource  new_tip_resource.robot
+Resource  login_resource.robot
 Suite Setup  Open And Configure Browser
 Suite Teardown  Close Browser
-Test Setup  Go To New Tip 
+Test Setup  Create User, Login And Go To New Tip
 
 ***Test Cases***
 Submit New Tip With Title
@@ -54,50 +56,3 @@ Submit New Tip With Nonexistent ISBN
     Set ISBN-description  testikirja
     Submit ISBN Tip
     Submit Should Fail With Message  ISBN-numerolla ei löytynyt kirjaa
-
-***Keywords***
-Go To New Tip
-    Go To New Tip Page
-    New Tip Page Should Be Open
-
-Set Title
-    [Arguments]  ${Title}
-    Input Text  title  ${title}
-
-Set Author
-    [Arguments]  ${Author}
-    Input Text  author  ${author}
-
-Set URL
-    [Arguments]  ${Title}
-    Input Text  url  ${title}
-
-Set Description
-    [Arguments]  ${Title}
-    Input Text  description  ${title}
-
-Set ISBN
-    [Arguments]  ${Title}
-    Input Text  isbn_number  ${title}
-
-Set ISBN-description
-    [Arguments]  ${Title}
-    Input Text  isbn_description  ${title}
-
-Submit Tip 
-    Click Button  Lisää uusi vinkki
-
-Submit ISBN Tip
-    Click Button  Lisää ISBN-vinkki
-
-Submit Should Succeed And Contain Tip 
-    [Arguments]  ${message}
-    Home Page Should Be Open
-    Page Should Contain  ${message}
-
-Submit Should Fail With Message
-    [Arguments]  ${message}
-    New Tip Page Should Be Open
-    Page Should Contain  ${message}
-
-
