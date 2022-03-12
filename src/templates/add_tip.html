@@ -5,7 +5,7 @@ Lisää uusi lukuvinkki
 {% endblock %}
 
 {% block body %}
-
+{% if session.user_id %}
 <h1>Lisää uusi vinkki</h1>
 <form action="/add_tip" method="POST">
     {% with messages = get_flashed_messages() %}
@@ -60,4 +60,7 @@ Lisää uusi lukuvinkki
 <br>
 Pakollinen tieto *
 <br>
+{% else %}
+Kirjaudu ensin sisään
+{% endif %}
 {% endblock %}

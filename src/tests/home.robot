@@ -16,6 +16,10 @@ New Tip Link Is Visible If Logged In
     Page Should Contain Link  /add_tip
     Logout
 
+New Tip Form Is Hidden If Not Logged In
+    Go To New Tip Page
+    Page Should Contain  Kirjaudu ensin sisään
+
 Click New Tip Link
     Create User And Login  seppo  seppo52  seppo123
     Go To Home Page
