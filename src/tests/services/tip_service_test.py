@@ -47,16 +47,16 @@ class TestTipService(unittest.TestCase):
         tips = self.tip_service.get_visible_tips()
         self.assertEqual(len(tips),1)
 
-        def test_searching_tips_returns_correct_number_of_tips(self):
-            self.tip_service.add_new_tip("hästämälöö urmulee", "A.W. Yrjänä", "", "", 1)
-            self.tip_service.add_new_tip("hästämälöö urmuleeuujee", "A.W. Yrjänä", "", "", 1)
-            self.tip_service.add_new_tip("hästämälöö urmuleeheiheiheii", "A.W. Yrjänä", "", "", 1)
-            tip_list = self.tip_service.get_visible_tips()
-            search_list1 = self.tip_service.get_searched_tips("hästämälöö urmulee")
-            search_list2 = self.tip_service.get_searched_tips("hästämälöö urmuleeuujee")
-            self.assertEqual(len(tip_list),3)
-            self.assertEqual(len(search_list1),3)
-            self.assertEqual(len(search_list2),1)
+    def test_searching_tips_returns_correct_number_of_tips(self):
+        self.tip_service.add_new_tip("hästämälöö urmulee", "A.W. Yrjänä", "", "", 1)
+        self.tip_service.add_new_tip("hästämälöö urmuleeuujee", "A.W. Yrjänä", "", "", 1)
+        self.tip_service.add_new_tip("hästämälöö urmuleeheiheiheii", "A.W. Yrjänä", "", "", 1)
+        tip_list = self.tip_service.get_visible_tips()
+        search_list1 = self.tip_service.get_searched_tips("hästämälöö urmulee")
+        search_list2 = self.tip_service.get_searched_tips("hästämälöö urmuleeuujee")
+        self.assertEqual(len(tip_list),3)
+        self.assertEqual(len(search_list1),3)
+        self.assertEqual(len(search_list2),1)
 
 
     def test_add_isbn_tip_successful(self):
