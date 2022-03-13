@@ -38,6 +38,12 @@ def add_new_tip():
         flash(str(error))
         return redirect_to_add_tip()
 
+@app.route("/search")
+def search():
+    query = request.args["search"]
+    tips = tip_service.get_searched_tips(query)
+    return render_template("search.html", tips=tips)
+
 @app.route("/add_isbn_tip", methods=["POST"])
 def add_isbn_tip():
     isbn_number = request.form.get("isbn_number")

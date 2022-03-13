@@ -29,8 +29,8 @@ class TipRepository:
 
         cursor = self.connection.cursor()
         try:
-            sql = """SELECT id, title, author, url, description, user_id FROM Tip WHERE title LIKE ? AND visible=1"""
-            cursor.execute(sql, (query))
+            sql = """SELECT id, title, author, url, description, user_id FROM Tip WHERE title LIKE :query AND visible=1"""
+            cursor.execute(sql, {"query":"%"+query+"%"})
             rows = cursor.fetchall()
         except:
             return []

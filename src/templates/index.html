@@ -33,9 +33,9 @@ Lukuvinkkikirjasto
 {% endif %}
 {% endwith %}
 
-<form action="/" method="POST">
-  <input type="text" id="query">
-  <button type="submit">Etsi</button>
+<form action="/search" method="GET">
+  <input type="text" name="search" id="search">
+  <input type="submit" value="Etsi">
 </form>
 <br>
 
