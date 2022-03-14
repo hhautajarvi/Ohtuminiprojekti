@@ -1,1 +1,1 @@
-web: cd src && gunicorn app:app
+web: python3 src/initialize_database.py && cd src && gunicorn app:app
