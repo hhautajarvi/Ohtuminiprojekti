@@ -20,3 +20,7 @@ Kurssityö Helsingin yliopiston ohjelmistotuotanto-kurssille.
 * Koodi testattu sekä yksikkötesteillä, että hyväksymistestauksella
 * Koodi on näkyvissä Githubissa, GithubActions suorittaa testit ja ne menevät läpi, sekä toiminnallisuus on testattavissa Herokussa
 * Koodin laatu saa pylintillä vähintään arvosanan 9
+
+## Lisenssi
+
+[Työ on lisensioitu MIT-lisenssillä](https://github.com/hhautajarvi/Ohtuminiprojekti/blob/master/LICENSE.md)
