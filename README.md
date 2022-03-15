@@ -11,8 +11,8 @@ Kurssityö Helsingin yliopiston ohjelmistotuotanto-kurssille.
 * [Sprint backlog 2](https://docs.google.com/spreadsheets/d/1LjiLqfzKAxbSqKGUekv8m1LyQUo8m6ogEYdo0RVK2Xs/edit#gid=1975663807)
 * [Sprint backlog 3](https://docs.google.com/spreadsheets/d/1LjiLqfzKAxbSqKGUekv8m1LyQUo8m6ogEYdo0RVK2Xs/edit#gid=1766966394)
 * [Flingan user storyt](https://edu.flinga.fi/s/EAL3A5M)
-* [Arkkitehtuuri](https://github.com/hhautajarvi/Ohtuminiprojekti/blob/master/dokumentaatio/arkkitehtuuri.md)
 * [Retrospektiivit](https://edu.flinga.fi/s/EG4Y7MS)
+* [Uusin release](https://github.com/hhautajarvi/Ohtuminiprojekti/releases/tag/viikko3)
 
 ## Definition of done
 
