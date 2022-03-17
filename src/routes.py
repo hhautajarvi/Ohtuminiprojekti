@@ -5,8 +5,8 @@ from services.user_service import user_service
 
 @app.route("/", methods=["GET"])
 def render_index():
-    tips = tip_service.get_visible_tips()
-    return render_template("index.html", tips=tips)
+    visible_tips = tip_service.get_visible_tips()
+    return render_template("index.html", tips=visible_tips)
 
 @app.route("/", methods=["POST"])
 def delete_tip():
