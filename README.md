@@ -14,6 +14,7 @@ Kurssityö Helsingin yliopiston ohjelmistotuotanto-kurssille.
 * [Flingan user storyt](https://edu.flinga.fi/s/EAL3A5M)
 * [Retrospektiivit](https://edu.flinga.fi/s/EG4Y7MS)
 * [Uusin release](https://github.com/hhautajarvi/Ohtuminiprojekti/releases/tag/viikko3)
+* [Loppuraportti](https://docs.google.com/document/d/1cXazHr_UHmDLQSn9azosJITsmWZdYucXB729QhHL4Zw/edit?usp=sharing)
 
 ## Definition of done
 
