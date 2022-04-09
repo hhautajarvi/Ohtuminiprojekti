@@ -1,9 +1,11 @@
 from database import database_connection
 from entities.tip import Tip
 
+
 def get_tip_by_row(row):
-    return Tip(row['id'], row['title'], row["author"], row['url'], \
-        row['description'], row['user_id'], row['visible']) if row else None
+    return Tip(row['id'], row['title'], row["author"], row['url'],
+               row['description'], row['user_id'], row['visible']) if row else None
+
 
 class TipRepository:
     def __init__(self, connection):
@@ -11,8 +13,8 @@ class TipRepository:
 
     def add_tip(self, title, author, url, description, user_id, visible=1):
         cursor = self.connection.cursor()
-        cursor.execute("INSERT INTO tip (title, author, url, description, user_id, visible)" \
-            " VALUES (?, ?, ?, ?, ?, ?)", (title, author, url, description, user_id, visible))
+        cursor.execute("INSERT INTO tip (title, author, url, description, user_id, visible)"
+                       " VALUES (?, ?, ?, ?, ?, ?)", (title, author, url, description, user_id, visible))
         self.connection.commit()
 
     def get_tips(self):
@@ -30,7 +32,7 @@ class TipRepository:
         cursor = self.connection.cursor()
         try:
             sql = """SELECT id, title, author, url, description, user_id FROM Tip WHERE title LIKE :query AND visible=1"""
-            cursor.execute(sql, {"query":"%"+query+"%"})
+            cursor.execute(sql, {"query": "%"+query+"%"})
             rows = cursor.fetchall()
         except:
             return []
@@ -48,5 +50,6 @@ class TipRepository:
         except:
             return False
         return True
+
 
 tip_repository = TipRepository(database_connection)

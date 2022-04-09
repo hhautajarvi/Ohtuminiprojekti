@@ -3,6 +3,7 @@ from repositories.user_repository import UserRepository
 from database import database_connection
 from initialize_database import initialize_database
 
+
 class TestUserRepository(unittest.TestCase):
     def setUp(self):
         initialize_database()

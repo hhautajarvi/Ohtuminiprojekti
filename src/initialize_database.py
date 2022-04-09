@@ -1,5 +1,6 @@
 from database import database_connection
 
+
 def drop_tables(connection):
     cursor = connection.cursor()
 
