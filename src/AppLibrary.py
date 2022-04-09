@@ -1,6 +1,7 @@
 import requests
 from initialize_database import initialize_database
 
+
 class AppLibrary:
     def __init__(self):
 
@@ -16,7 +17,7 @@ class AppLibrary:
             'title': title,
             'author': author,
             'url': url,
-            'description':description
+            'description': description
         }
         requests.post(f'{self._base_url}/add_tip', data=data)
 

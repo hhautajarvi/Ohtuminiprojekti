@@ -1,9 +1,11 @@
 import unittest
 from entities.tip import Tip
 
+
 class TestTip(unittest.TestCase):
     def setUp(self):
-        self.tip = Tip(1, "otsikko", "kirjoittaja", "https://www.youtube.com/", "kuvaus", 1, 1)
+        self.tip = Tip(1, "otsikko", "kirjoittaja",
+                       "https://www.youtube.com/", "kuvaus", 1, 1)
 
     def test_constructor_works(self):
         self.assertEqual(1, self.tip.id)
