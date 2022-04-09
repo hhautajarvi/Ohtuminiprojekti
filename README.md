@@ -26,3 +26,4 @@ Kurssityö Helsingin yliopiston ohjelmistotuotanto-kurssille.
 ## Lisenssi
 
 [Työ on lisensioitu MIT-lisenssillä](https://github.com/hhautajarvi/Ohtuminiprojekti/blob/master/LICENSE.md)
+
